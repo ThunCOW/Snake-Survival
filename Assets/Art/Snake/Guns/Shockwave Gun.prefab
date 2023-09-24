@@ -19517,6 +19517,7 @@ GameObject:
   - component: {fileID: 4556246560879963983}
   - component: {fileID: 4783994782524517135}
   - component: {fileID: 4783994781245985090}
+  - component: {fileID: 241753688788478612}
   m_Layer: 0
   m_Name: Shockwave Gun
   m_TagString: Untagged
@@ -19553,13 +19554,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0911560b069c36d46a2888705d8abd49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MountedWeaponSO: {fileID: 11400000, guid: 7df4ae7052e447a47917acf0c4949fd1, type: 2}
-  MountedWeapon: {fileID: 0}
+  WeaponType: 2
+  MountedWeaponSO: {fileID: 11400000, guid: 7798b951ac57ad54eb33d99fdc71d550, type: 2}
   EnemyLayer:
     serializedVersion: 2
     m_Bits: 128
   enemyDetectionRadiusEditor: 50
   waitUntilNextSearchEditor: 0.5
+  MountedWeapon: {fileID: 11400000, guid: 7798b951ac57ad54eb33d99fdc71d550, type: 2}
 --- !u!82 &4783994781245985090
 AudioSource:
   m_ObjectHideFlags: 0
@@ -19656,6 +19658,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &241753688788478612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5485850515229187502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f237509a2a898f4bad96ce82af98617, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShockSound: {fileID: 8300000, guid: b1e0037f2c755a64889629d7dd929279, type: 3}
 --- !u!1001 &1574598768437933568
 PrefabInstance:
   m_ObjectHideFlags: 0

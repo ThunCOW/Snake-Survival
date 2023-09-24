@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour
     public SceneReference MainMenu;
     public SceneReference Level_1;
 
+    public AudioClip Music;
+
     private void Awake()
     {
         if (Instance == null)
@@ -24,7 +26,6 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-
     }
 
     public void LoadLevel()
@@ -45,6 +46,7 @@ public class GameManager : MonoBehaviour
     public void MusicSetting(bool isOn)
     {
         MusicVolume = isOn ? 1 : 0;
+        //GetComponent<AudioSource>().volume = MusicVolume * 0.1f;
     }
 
     public void SoundSetting(bool isOn)

@@ -46,13 +46,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0911560b069c36d46a2888705d8abd49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  WeaponType: 1
   MountedWeaponSO: {fileID: 11400000, guid: 7df4ae7052e447a47917acf0c4949fd1, type: 2}
-  MountedWeapon: {fileID: 0}
   EnemyLayer:
     serializedVersion: 2
     m_Bits: 128
   enemyDetectionRadiusEditor: 50
   waitUntilNextSearchEditor: 0.5
+  MountedWeapon: {fileID: 11400000, guid: 7df4ae7052e447a47917acf0c4949fd1, type: 2}
 --- !u!82 &1356252558
 AudioSource:
   m_ObjectHideFlags: 0

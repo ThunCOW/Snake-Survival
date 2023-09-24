@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -21,7 +22,9 @@ public class ExperienceManager : MonoBehaviour
             {
                 currentLVL++;
                 currentEXP = 0;
+                LevelUp?.Invoke();
             }
+            TEMPAUDIOSOURCE.PlayOneShot(TEMPCLIP, 0.3f * GameManager.Instance.SoundVolume);
 
             EXP_Bar.transform.localScale = new Vector3(currentEXP / (float)experienceReq[currentLVL], 1, 1);
         }
@@ -33,6 +36,11 @@ public class ExperienceManager : MonoBehaviour
     [SerializeField]
     private RectTransform EXP_Bar;
 
+    public Action LevelUp;
+
+    public AudioSource TEMPAUDIOSOURCE;
+    public AudioClip TEMPCLIP;
+
     void Awake()
     {
         Instance = this;
@@ -40,6 +48,6 @@ public class ExperienceManager : MonoBehaviour
 
     void Start()
     {
-        currentEXP = 0;    
+        //currentEXP = 0;    
     }
 }
