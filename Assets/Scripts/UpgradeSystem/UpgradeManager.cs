@@ -34,7 +34,7 @@ public class UpgradeManager : MonoBehaviour
 
         Menu.SetActive(true);
 
-        int RandomNumber = Random.Range(0, 4);
+        int RandomNumber = Random.Range(0, 3);
 
         GunScriptableObject gun;
         switch (RandomNumber)
@@ -62,9 +62,9 @@ public class UpgradeManager : MonoBehaviour
 
         PopulateTooltipMenu(gun, UpgradeTooltipArray[0], UpgradeTooltipSO.UpgradeTooltipInfos[RandomNumber].TooltipInfos[0].Description);
 
-        int newRand = Random.Range(0, 4);
+        int newRand = Random.Range(0, 3);
         while(newRand == RandomNumber)
-            newRand = Random.Range(0, 4);
+            newRand = Random.Range(0, 3);
 
         switch (newRand)
         {
